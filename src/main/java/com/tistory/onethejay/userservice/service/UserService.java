@@ -14,7 +14,6 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
 
 import java.util.ArrayList;
 import java.util.UUID;
@@ -24,7 +23,6 @@ import java.util.UUID;
 @Service
 public class UserService implements UserDetailsService {
 
-    private final Environment env;
     private final UserRepository userRepository;
     private final BCryptPasswordEncoder passwordEncoder;
 
