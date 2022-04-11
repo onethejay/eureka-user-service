@@ -5,6 +5,27 @@ spring:
   application:
     name: user-service
 
+  jackson:
+    property-naming-strategy: SNAKE_CASE
+
+  jpa:
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+
+    open-in-view: false
+
+    show-sql: true
+
+    properties:
+      hibernate:
+        format_sql: true
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/mydb?characterEncoding=utf8&autoReconnect=true&validationQuery=select 1
+    driver-class-name: org.mariadb.jdbc.Driver
+    username: root
+    password: p@ssw0rd
+
 eureka:
   instance:
     instance-id: ${spring.cloud.client.hostname}:${spring.application.instance_id:${random.value}}
