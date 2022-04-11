@@ -25,7 +25,6 @@ import java.util.UUID;
 public class UserService implements UserDetailsService {
 
     private final Environment env;
-    private final RestTemplate restTemplate;
     private final UserRepository userRepository;
     private final BCryptPasswordEncoder passwordEncoder;
 
