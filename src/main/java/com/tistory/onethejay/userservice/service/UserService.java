@@ -75,4 +75,3 @@ public class UserService implements UserDetailsService {
         return new ModelMapper().map(userEntity, UserDto.class);
     }
 }
-

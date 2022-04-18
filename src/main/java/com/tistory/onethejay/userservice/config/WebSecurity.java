@@ -20,10 +20,12 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
+        String IP_ADDRESS = "192.168.219.107";
         http.csrf().disable();
         http.authorizeRequests().antMatchers("/actuator/**").permitAll();
         http.authorizeRequests().antMatchers("/**")
-                .access("hasIpAddress('192.168.219.107')")
+//                .access("hasIpAddress('" + IP_ADDRESS+ "')")
+                .hasIpAddress(IP_ADDRESS)
                 .and()
                 .addFilter(getAuthenticationFilter());
 

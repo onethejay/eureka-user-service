@@ -12,7 +12,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Builder
 @Entity
-@Table(name="tb_users")
+@Table(name = "tb_users")
 public class UserEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,4 +26,3 @@ public class UserEntity {
     @Column(nullable = false, unique = true)
     private String encryptedPwd;
 }
-

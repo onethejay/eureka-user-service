@@ -11,8 +11,6 @@ public class UserDto {
     private String pwd;
     private String userId;
     private Date createdAt;
-
     private String encryptedPwd;
-
 }
 
