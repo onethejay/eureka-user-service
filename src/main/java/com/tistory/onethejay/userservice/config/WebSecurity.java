@@ -23,7 +23,7 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
         http.csrf().disable();
         http.authorizeRequests().antMatchers("/actuator/**").permitAll();
         http.authorizeRequests().antMatchers("/**")
-                .hasIpAddress("127.0.0.1")   // <- IP 변경
+                .access("hasIpAddress('192.168.219.107')")
                 .and()
                 .addFilter(getAuthenticationFilter());
 
