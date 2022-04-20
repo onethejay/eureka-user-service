@@ -25,8 +25,8 @@ import java.util.Date;
 
 @Slf4j
 public class AuthenticationFilter extends UsernamePasswordAuthenticationFilter {
-    private UserService userService;
-    private Environment env;
+    private final UserService userService;
+    private final Environment env;
 
     public AuthenticationFilter(AuthenticationManager authenticationManager,
                                 UserService userService,
@@ -59,7 +59,7 @@ public class AuthenticationFilter extends UsernamePasswordAuthenticationFilter {
     protected void successfulAuthentication(HttpServletRequest request,
                                             HttpServletResponse response,
                                             FilterChain chain,
-                                            Authentication authResult) throws IOException, ServletException {
+                                            Authentication authResult) {
 
         String userName = ((User) authResult.getPrincipal()).getUsername();
         UserDto userDetails = userService.getUserDetailsByEmail(userName);

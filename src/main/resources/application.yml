@@ -37,4 +37,4 @@ eureka:
 
 token:
   expiration_time: 8640000
-  secret: JWTSECRET123456789123456789
+  secret: my_token_default

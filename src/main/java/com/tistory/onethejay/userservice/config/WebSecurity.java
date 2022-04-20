@@ -20,7 +20,7 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        String IP_ADDRESS = "127.0.0.1";
+        String IP_ADDRESS = "192.168.219.107"; //로컬루프백 주소가 아닌 유레카 서버에 보이는 IP를 입력해야 한다.
         http.csrf().disable();
         http.authorizeRequests().antMatchers("/actuator/**").permitAll();
         http.authorizeRequests().antMatchers("/**")
