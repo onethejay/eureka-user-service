@@ -1,5 +1,5 @@
 spring:
   cloud:
     config:
-      uri: http://127.0.0.1:8888
-      name: service-base
+      uri: http://127.0.0.1:8888  # config-server 주소
+      name: service-base  # 연결할 설정 yml 파일명
