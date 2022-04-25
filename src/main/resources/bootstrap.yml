@@ -2,7 +2,8 @@ spring:
   cloud:
     config:
       uri: http://127.0.0.1:8888  # config-server 주소
-      name: myservice  # 연결할 설정 yml 파일명
+      name: config-service  # 연결할 설정 yml 파일명, config-service를 입력하면 application.yml을 가져와서 세팅한다.
+#      name: myservice  # 연결할 설정 yml 파일명, config-service를 입력하면 application.yml을 가져와서 세팅한다.
 
-  profiles:
-    active: dev
+#  profiles:
+#    active: dev
